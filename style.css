@@ -1,0 +1,177 @@
+:root {
+    --logo-font-size: 2em;
+    --main-font: 24px;
+    --primary-color: #fff;
+    --secondary-color:  #000;
+    --border-radius: 8px;
+    --content-padding: 15px;
+    --shadow-color: rgba(0, 0, 0, 0.05);
+}
+
+* {
+    box-sizing: border-box;
+    font-family: Helvetica, Arial, sans-serif;
+    line-height: 1.3;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    width: 420px;
+    height: 720px;
+    margin: 0 auto;
+    padding: 16px var(--content-padding);
+    border-radius: var(--border-radius);
+    box-shadow: 0 0 8px 5px var(--shadow-color);
+    gap: 20px;
+}
+
+header {
+    width: 100%;
+    border-radius: 4px;
+    padding: 4px 6px;
+    /* box-shadow: 0 0 2px 2px var(--shadow-color); */
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-wrapper > img {
+    width: 36px;
+}
+
+.logo-wrapper {
+    position: relative;
+}
+
+.logo-wrapper::before {
+    display: block;
+    position: absolute;
+    top: -10px;
+    left: -21px;
+    content: " ";
+    width: 72px;
+    height: 55px;
+    background-color: rgba(96, 1, 248, 0.35);
+    /* border: 6px solid rgba(96, 1, 248, 0.253); */
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border-left: none;
+
+}
+
+.text-wrapper > span {
+    font-size: var(--logo-font-size);
+    font-weight: bold;
+}
+
+.cancel-btn {
+    background: none;
+    border: none;
+}
+
+img[src="cancel.svg"] {
+    width: 18px;
+}
+
+
+/* Main section */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+/* Top section */
+.top {
+    width: 100%;
+    padding: 4px 6px;
+}
+
+.features-container {
+    display: flex;
+    width: 100%;
+    gap: 20px;
+}
+
+.features-container > div {
+    width: 100%;
+}
+.dict-btn, .notes-btn {
+    width: 100%;
+    height: 200px;
+    font-size: 24px;
+    font-weight: 500;
+    border-radius: 8px;
+    border: none;
+}
+
+.dict-btn {
+    background-color:rgba(96, 1, 248, 0.35);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+}
+
+.dict-btn:hover {
+    background-color: rgba(96, 1, 248, 1);
+    color: #fff;
+}
+
+.notes-btn {
+    background-color:rgba(0, 255, 0, 0.35);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+}
+
+.notes-btn:hover {
+    background-color: rgb(46, 167, 46);
+    color: #fff;
+}
+
+/* History section */
+.history {
+    width: 100%;
+}
+ul {
+    list-style: none;
+    margin-top: 10px;
+    width: 100%;
+}
+
+li {
+    margin-top: 15px;
+}
+
+li > button {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    background: none;
+    border: 1px solid black;
+    border-radius: 8px;
+}
+
+.h-note-btn::before, .h-dict-btn::before {
+    position: absolute;
+    background-color: #fff;
+    padding: 4px 4px;
+    top: -14px;
+    left: 15px;
+}
+
+.h-note-btn::before {
+    content: "Notes";
+}
+
+.h-dict-btn::before {
+    content: "Dictionary";
+}
+
+
